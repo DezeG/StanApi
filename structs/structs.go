@@ -5,7 +5,7 @@ type StanRequest struct {
 		Country string`json:"country"`
 		Description string`json:"description"`
 		Drm bool `json:"drm"`
-		EpisodeCount int `json:"episodCount"`
+		EpisodeCount int `json:"episodeCount"`
 		Genre string `json:"genre"`
 		Image struct {
 			ShowImage string `json:"showImage"`
@@ -32,6 +32,10 @@ type StanRequest struct {
 }
 
 type StanResponse struct {
+	Response []ResponseMovie `json:"response"`
+}
+
+type ResponseMovie struct {
 	Image string`json:"image"`
 	Slug string`json:"slug"`
 	Title string `json:"title"`
